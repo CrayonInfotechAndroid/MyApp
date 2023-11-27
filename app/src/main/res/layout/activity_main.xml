@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".Activities.MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+   <com.google.android.material.textfield.TextInputLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_marginHorizontal="20dp"
+       android:layout_marginVertical="10dp">
+       <com.google.android.material.textfield.TextInputEditText
+           android:id="@+id/titleET"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:inputType="text"
+           android:hint="Enter a Title">
+
+       </com.google.android.material.textfield.TextInputEditText>
+   </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginVertical="10dp">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/priceET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:maxLength="5"
+            android:hint="Enter a Price">
+
+        </com.google.android.material.textfield.TextInputEditText>
+    </com.google.android.material.textfield.TextInputLayout>
+    <Button
+        android:id="@+id/saveBT"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        android:layout_marginVertical="10dp"
+        android:layout_marginHorizontal="20dp"
+        android:backgroundTint="#FF5722"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/startBT"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Start"
+            android:layout_marginVertical="10dp"
+            android:layout_marginHorizontal="20dp"
+            android:backgroundTint="#FF5722"
+            android:layout_weight="1"/>
+        <Button
+            android:id="@+id/stopBT"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Stop"
+            android:layout_marginVertical="10dp"
+            android:layout_marginHorizontal="20dp"
+            android:backgroundTint="#FF5722"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+        <Button
+            android:id="@+id/viewBT"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="View Expense"
+            android:layout_marginVertical="10dp"
+            android:layout_marginHorizontal="20dp"
+            android:backgroundTint="#FF5722"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/scratchBT"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="View Rewards"
+                android:layout_marginVertical="10dp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_weight="1"
+                android:backgroundTint="#FF5722"/>
+            <Button
+                android:id="@+id/recyclerBT"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Recycler"
+                android:layout_marginVertical="10dp"
+                android:layout_marginHorizontal="20dp"
+                android:backgroundTint="#FF5722"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+    </LinearLayout>
+    </ScrollView>
+</LinearLayout>

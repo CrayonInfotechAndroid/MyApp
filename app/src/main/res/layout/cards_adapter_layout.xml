@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:cardUseCompatPadding="true"
+        app:cardCornerRadius="10dp">
+
+
+
+    <RelativeLayout
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/cardImageView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/scratch_card"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"/>
+        <LinearLayout
+            android:id="@+id/winLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/win_icon"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:text="You have won"/>
+
+            <LinearLayout
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp">
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:src="@drawable/coin_icon_png"/>
+                <TextView
+                    android:id="@+id/winAmount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_marginStart="5dp"
+                    android:textColor="#CC0000"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
