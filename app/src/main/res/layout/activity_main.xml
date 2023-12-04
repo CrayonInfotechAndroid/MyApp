@@ -110,6 +110,15 @@
                 android:layout_weight="1"/>
 
         </LinearLayout>
+
+        <Button
+            android:id="@+id/showAlertBT"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Show Alert"
+            android:layout_marginVertical="10dp"
+            android:layout_marginHorizontal="20dp"
+            android:backgroundTint="#FF5722"/>
     </LinearLayout>
     </ScrollView>
 </LinearLayout>

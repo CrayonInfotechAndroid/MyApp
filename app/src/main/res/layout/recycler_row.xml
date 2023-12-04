@@ -1,32 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/idCVCOurseItem"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="5dp"
-    app:cardCornerRadius="5dp"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    app:cardCornerRadius="6dp"
+    app:cardElevation="4dp">
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-       android:orientation="horizontal"
-        android:layout_gravity="center_horizontal">
+        android:layout_height="wrap_content">
 
+        <!--image view for displaying course image-->
         <ImageView
-            android:layout_width="150dp"
-            android:layout_height="80dp"
-            android:id="@+id/image"
-            android:scaleType="centerCrop"/>
+            android:id="@+id/idIVCourse"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="10dp" />
 
-        <TextView
-            android:id="@+id/text"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="Number"
-            android:padding="8dp"
-            android:textStyle="bold"
-            android:textSize="18sp"
-            android:gravity="center_vertical"/>
-    </LinearLayout>
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="2dp"
+            android:layout_toEndOf="@id/idIVCourse"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="4dp">
+
+            <!--Textview for displaying our Course Name-->
+            <TextView
+                android:id="@+id/idTVCourseName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="2dp"
+                android:text="CourseName"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <!--Textview for displaying our Course Duration-->
+            <TextView
+                android:id="@+id/idTVCourseDuration"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="2dp"
+                android:text="Duration"
+                android:textColor="@color/black" />
+
+            <!--Textview for displaying our Course Description-->
+            <TextView
+                android:id="@+id/idTVCourseDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="2dp"
+                android:text="Description"
+                android:textColor="@color/black" />
+        </LinearLayout>
+
+    </RelativeLayout>
 
 </androidx.cardview.widget.CardView>

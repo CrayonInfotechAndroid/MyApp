@@ -2,9 +2,12 @@ package com.example.myapp.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
@@ -21,7 +24,7 @@ import java.util.Objects;
 public class MainActivity extends AppCompatActivity {
 
     TextInputEditText titleET, priceET;
-    Button saveBT,startBT,stopBT,viewBT,scratchBT,recyclerBT;
+    Button saveBT,startBT,stopBT,viewBT,scratchBT,recyclerBT,showAlertBT;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +39,47 @@ public class MainActivity extends AppCompatActivity {
         viewBT = findViewById(R.id.viewBT);
         scratchBT = findViewById(R.id.scratchBT);
         recyclerBT = findViewById(R.id.recyclerBT);
+        showAlertBT = findViewById(R.id.showAlertBT);
+
+        showAlertBT.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // instance of alert dialog to build alert dialog
+                AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+                builder.setIcon(R.drawable.alert);
+                builder.setTitle("Alert! Please Update Your App");
+                builder.setMessage("Some New Features Available in New update");
+                builder.setCancelable(false);
+
+                // set the neutral button to do some actions
+                builder.setNeutralButton("DISMISS", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        Toast.makeText(MainActivity.this, "Alert Dialog Dismissed", Toast.LENGTH_SHORT).show();
+                    }
+                });
+
+                // set the positive button to do some actions
+                builder.setPositiveButton("OKAY", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        Toast.makeText(MainActivity.this, "OKAY", Toast.LENGTH_SHORT).show();
+                    }
+                });
+
+                builder.setNegativeButton("CANCEL", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        Toast.makeText(MainActivity.this, "CANCEL", Toast.LENGTH_SHORT).show();
+                    }
+                });
+
+                AlertDialog alertDialog = builder.create();
+                alertDialog.show();
+
+                Objects.requireNonNull(alertDialog.getWindow()).setGravity(Gravity.TOP);
+            }
+        });
 
         recyclerBT.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -102,4 +146,5 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
 }

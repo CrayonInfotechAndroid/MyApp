@@ -49,4 +49,11 @@ dependencies {
     implementation ("com.squareup.retrofit2:retrofit:2.7.2")
     implementation ("com.squareup.retrofit2:converter-gson:2.7.2")
     implementation("com.github.bumptech.glide:glide:3.8.0")
+
+    // below line is used for volley library
+    implementation ("com.android.volley:volley:1.2.1")
+// below line is used for image loading library
+    implementation ("com.squareup.picasso:picasso:2.71828")
+
+
 }
